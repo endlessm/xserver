@@ -117,7 +117,7 @@ xf86CrtcCreate(ScrnInfoPtr scrn, const xf86CrtcFuncsRec * funcs)
     memset(&crtc->bounds, '\0', sizeof(crtc->bounds));
 
     /* Preallocate gamma at a sensible size. */
-    crtc->gamma_size = 256;
+    crtc->gamma_size = 1024;
     crtc->gamma_red = xallocarray(crtc->gamma_size, 3 * sizeof(CARD16));
     if (!crtc->gamma_red) {
         free(crtc);
